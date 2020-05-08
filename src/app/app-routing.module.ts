@@ -4,13 +4,15 @@ import { ReportComponent } from './report/report.component';
 import { MainComponent } from './main/main.component';
 import { SignalComponent } from './signal/signal.component';
 import { SignalResultsComponent } from './signal-results/signal-results.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'report/:id', component: ReportComponent },
   { path: 'signal', component: SignalComponent },
-  { path: 'signal/:symbol', component: SignalResultsComponent }
+  { path: 'signal/:symbol', component: SignalResultsComponent },
+  { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({
