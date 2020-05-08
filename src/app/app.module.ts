@@ -10,6 +10,7 @@ import { TradingViewComponent } from './trading-view/trading-view.component';
 import { MaterialModule } from './shared/material/material.module';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { SignalComponent } from './signal/signal.component';
+import { SignalResultsComponent } from './signal-results/signal-results.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SignalComponent } from './signal/signal.component';
     MainComponent,
     TradingViewComponent,
     WatchlistComponent,
-    SignalComponent
+    SignalComponent,
+    SignalResultsComponent
   ],
   imports: [
     BrowserModule,
