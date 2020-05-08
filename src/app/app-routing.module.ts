@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ReportComponent } from './report/report.component';
 import { MainComponent } from './main/main.component';
+import { SignalComponent } from './signal/signal.component';
 
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'report/:id', component: ReportComponent }
+  { path: 'report/:id', component: ReportComponent },
+  { path: 'signal', component: SignalComponent }
 ];
 
 @NgModule({
