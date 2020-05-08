@@ -1,1 +1,31 @@
-<p>signal-results works!</p>
+<div class="main-content">
+    <div class="results-container">
+        <div class="row results">
+            <div class="col-md-12 col-lg-8 offset-lg-2">
+                <ng-container *ngIf="prediction$ | async as prediction; else loading">
+                    <ng-container *ngIf="prediction.success; else predictionError">
+                        <div class="header">
+                            <div class="item">
+                                <app-back></app-back>
+                                <h1>{{symbol}}</h1>
+                            </div>
+                            <h3>{{prediction.signal}}</h3>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <div class="trading-container">
+                            <app-trading-view [stock]="symbol"></app-trading-view>
+                        </div>
+                    </ng-container>
+                    <ng-template #predictionError>
+                        <pre>
+                            {{prediction | json}}
+                        </pre>
+                    </ng-template>
+                </ng-container>
+                <ng-template #loading>
+                    Getting prediction...
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

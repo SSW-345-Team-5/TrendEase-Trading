@@ -1,0 +1,32 @@
+.results-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.trading-container {
+    margin-top: 1rem;
+}
+
+.results {
+    width: 100%;
+}
+
+.header {
+    .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        app-back {
+            margin-bottom: 16px;
+        }
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
