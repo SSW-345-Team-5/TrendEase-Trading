@@ -15,6 +15,7 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
 import { SignalComponent } from './signal/signal.component';
 import { SignalResultsComponent } from './signal-results/signal-results.component';
 import { BackComponent } from './back/back.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BackComponent } from './back/back.component';
     WatchlistComponent,
     SignalComponent,
     SignalResultsComponent,
-    BackComponent
+    BackComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
