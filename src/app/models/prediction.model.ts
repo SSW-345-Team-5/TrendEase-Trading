@@ -1,3 +1,4 @@
 export interface Prediction {
-    signal: string;
+    signal: 'buy' | 'sell' | 'hold';
+    success: boolean;
 }
