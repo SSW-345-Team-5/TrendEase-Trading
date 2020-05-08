@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WatchlistComponent implements OnInit {
 
+  symbols = ['MSFT', 'TSLA', 'AAPL'];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  add(symbol: string) {
+    console.log(`adding ${symbol}`)
+  }
+
+  remove(symbol: string) {
+    console.log(`removing ${symbol}`)
   }
 
 }

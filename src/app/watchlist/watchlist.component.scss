@@ -1,0 +1,28 @@
+.status {
+    color: #ccc;
+    font-weight: 200 !important;
+    // font-size: 12px !important;
+}
+
+.ticker {
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    font-family: "Ubuntu", sans-serif;
+}
+
+mat-list-item {
+    mat-icon {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 200ms ease;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+mat-list-item:hover {
+    mat-icon {
+        visibility: visible;
+        opacity: 1;
+    }
+}
