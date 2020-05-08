@@ -1,0 +1,16 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.form {
+    width: 100%;
+}
+
+p {
+    margin-top: 0.5rem;
+}
