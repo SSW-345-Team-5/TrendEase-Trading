@@ -7,7 +7,7 @@
                     <mat-divider></mat-divider>
                     <p class="details">Generates a buy/sell/hold signal through a classifier model trained with a
                         genetic algorithm.</p>
-                    <p><a [routerLink]="['about']">Learn more</a></p>
+                    <p><a [routerLink]="['/about']">Learn more</a></p>
                 </div>
                 <form [formGroup]="tickerForm">
                     <mat-form-field class="full-width">
@@ -15,7 +15,7 @@
                         <input matInput placeholder="MSFT" formControlName="ticker">
                     </mat-form-field>
                 </form>
-                <button mat-raised-button (click)="submit()">Predict</button>
+                <button mat-raised-button [disabled]="!tickerForm.valid" (click)="submit()">Predict</button>
             </div>
         </div>
     </div>
