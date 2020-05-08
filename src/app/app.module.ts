@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReportComponent } from './report/report.component';
 import { MainComponent } from './main/main.component';
+import { TradingViewComponent } from './trading-view/trading-view.component';
+import { MaterialModule } from './shared/material/material.module';
+import { WatchlistComponent } from './watchlist/watchlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReportComponent,
-    MainComponent
+    MainComponent,
+    TradingViewComponent,
+    WatchlistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
