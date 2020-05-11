@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class WatchlistComponent implements OnInit {
 
   symbols = ['MSFT', 'TSLA', 'AAPL'];
+  recommended = ['FANG', 'GE', 'OXY'];
 
   constructor() { }
 

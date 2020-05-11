@@ -7,12 +7,12 @@
     <mat-divider></mat-divider>
     <mat-list-item *ngFor="let symbol of symbols">
         <div class="ticker" mat-line>{{symbol}}</div>
-        <div class="status" mat-line> buy/sell </div>
+        <div class="status" mat-line>buy/sell </div>
         <mat-icon (click)="remove(symbol)">remove</mat-icon>
     </mat-list-item>
     <div mat-subheader>Recommended</div>
     <mat-divider></mat-divider>
-    <mat-list-item *ngFor="let symbol of symbols">
+    <mat-list-item *ngFor="let symbol of recommended">
         <div class="ticker" mat-line>{{symbol}}</div>
         <div class="status" mat-line> buy/sell </div>
         <mat-icon (click)="add(symbol)">add</mat-icon>
