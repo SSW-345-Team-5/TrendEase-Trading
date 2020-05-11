@@ -13,7 +13,7 @@ import { TradingViewComponent } from './trading-view/trading-view.component';
 import { MaterialModule } from './shared/material/material.module';
 import { WatchlistComponent } from './watchlist/watchlist.component';
 import { SignalComponent } from './signal/signal.component';
-import { SignalResultsComponent } from './signal-results/signal-results.component';
+import { SignalResultsComponent, SignalResultsBottomSheetComponent } from './signal-results/signal-results.component';
 import { BackComponent } from './back/back.component';
 import { AboutComponent } from './about/about.component';
 
@@ -26,6 +26,7 @@ import { AboutComponent } from './about/about.component';
     WatchlistComponent,
     SignalComponent,
     SignalResultsComponent,
+    SignalResultsBottomSheetComponent,
     BackComponent,
     AboutComponent
   ],
