@@ -1,31 +1,47 @@
 <div class="main-content">
     <div class="results-container">
-        <div class="row results">
+        <div *ngIf="prediction$ | async as prediction; else loading" class="row results">
             <div class="col-md-12 col-lg-8 offset-lg-2">
-                <ng-container *ngIf="prediction$ | async as prediction; else loading">
-                    <ng-container *ngIf="prediction.success; else predictionError">
-                        <div class="header">
-                            <div class="item">
-                                <app-back></app-back>
+                <ng-container *ngIf="prediction.success; else predictionError">
+                    <div class="header">
+                        <div class="item">
+                            <app-back></app-back>
+                            <div class="item-inner">
                                 <h1>{{symbol}}</h1>
                             </div>
-                            <h3>{{prediction.signal}}</h3>
                         </div>
-                        <mat-divider></mat-divider>
-                        <div class="trading-container">
-                            <app-trading-view [stock]="symbol"></app-trading-view>
+                        <div class="item">
+                            <div class="item-inner">
+                                <h3
+                                    [ngClass]="{'buy': prediction.signal === 'BUY', 'sell': prediction.signal === 'SELL'}">
+                                    {{prediction.signal}}</h3>
+                                <p class="confidence">{{getConfidence(prediction) | percent:'2.3'}}</p>
+                            </div>
                         </div>
-                    </ng-container>
-                    <ng-template #predictionError>
-                        <pre>
-                            {{prediction | json}}
-                        </pre>
-                    </ng-template>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <p class="duration">Prediction took: {{prediction.prediction_time}}s</p>
+                    <div class="trading-container">
+                        <app-trading-view [stock]="symbol"></app-trading-view>
+                    </div>
+                    <button mat-stroked-button (click)="openSheet(prediction)">
+                        View Raw
+                    </button>
                 </ng-container>
-                <ng-template #loading>
-                    Getting prediction...
+                <ng-template #predictionError>
+                    <h1>{{prediction.error.type}}</h1>
+                    <p>{{prediction.error.message}}</p>
+                    <button mat-raised-button [routerLink]="['/signal']">Try again</button>
                 </ng-template>
             </div>
         </div>
+        <ng-template #loading>
+            <div class="loading-container">
+                <div class="loading-inner">
+                    <p>Getting prediction...</p>
+                    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                </div>
+            </div>
+        </ng-template>
     </div>
 </div>
