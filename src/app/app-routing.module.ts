@@ -8,11 +8,14 @@ import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
-  { path: '', component: MainComponent },
-  { path: 'report/:id', component: ReportComponent },
+  // { path: '', component: MainComponent },
+  { path: '', redirectTo: 'signal', pathMatch: 'full' },
+
+  { path: 'report/:id/:symbol', component: ReportComponent },
   { path: 'signal', component: SignalComponent },
   { path: 'signal/:symbol', component: SignalResultsComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'about', component: AboutComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
