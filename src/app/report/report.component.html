@@ -1,23 +1,17 @@
 <mat-toolbar>
     <img src="assets/img/branding/trendease-logo.png" alt="Trendease Trading">
-    <!-- <h1>{{data.ticker}}</h1> -->
-    <h1>MSFT</h1>
+    <h1>{{symbol}}</h1>
 </mat-toolbar>
 
 <div class="main-content">
     <div class="row">
         <div class="col-md-12 col-lg-4">
-            <!-- <h3>Watchlist</h3> -->
-            <!-- <mat-divider></mat-divider> -->
             <app-watchlist></app-watchlist>
         </div>
         <div class="col-md-12 col-lg-8">
             <div class="chart-container">
-                <!-- <app-trading-view [stock]="data.ticker"></app-trading-view> -->
-                <app-trading-view [stock]="'MSFT'"></app-trading-view>
-                <!-- <app-trading-view [crypto]="'BTCUSDT'"></app-trading-view> -->
+                <app-trading-view [stock]="symbol"></app-trading-view>
             </div>
         </div>
     </div>
-
 </div>

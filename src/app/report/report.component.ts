@@ -9,9 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 export class ReportComponent implements OnInit {
 
   id: string;
+  symbol: string;
+
+
 
   constructor(private route: ActivatedRoute) {
-    this.route.params.subscribe(params => this.id = params.id);
+    this.route.params.subscribe(params => {
+      this.id = params.id;
+      this.symbol = params.symbol.toUpperCase();
+    });
   }
 
   ngOnInit(): void {
